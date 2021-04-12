@@ -9,10 +9,13 @@ public class TravelOffice {
         if(customers[customers.length-1] != null){
             Customer[] auxiliaryTable = customers;
             customers = new Customer[customers.length * 2];
+            for (int i = 0; i < auxiliaryTable.length ; i++) {
+                customers[i] = auxiliaryTable[i];
+            }
         }
-        for (Customer i : customers) {
-            if (i == null) {
-                i = customer;
+        for (int i=0; i < customers.length; i++) {
+            if(customers[i] == null) {
+                customers[i] = customer;
                 break;
             }
         }
@@ -28,7 +31,7 @@ public class TravelOffice {
         result.append("Klienci Biura: \n");
         for (Customer i : customers) {
             if(i != null) {
-                result.append(i.toString());
+                result.append(i + "\n");
             }
         }
         return result.toString();
