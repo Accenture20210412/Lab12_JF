@@ -64,11 +64,10 @@ public class Trip {
 
     @Override
     public String toString() {
-        return "Trip{" +
-                "startOfTrip=" + startOfTrip +
-                ", endOfTrip=" + endOfTrip +
-                ", destiny='" + destiny + '\'' +
-                ", price=" + this.getPrice() +
-                '}';
+        return  "Trip to: " + destiny +
+                ", date: " + startOfTrip +
+                " - " + endOfTrip +
+                ", cost: " + this.getPrice() +
+                "$";
     }
 }

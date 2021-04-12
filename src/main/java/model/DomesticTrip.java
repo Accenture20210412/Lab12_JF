@@ -22,9 +22,8 @@ public class DomesticTrip extends Trip{
 
     @Override
     public String toString() {
-        return "DomesticTrip{" +
-                "selfAproachDiscount=" + selfAproachDiscount +
-                '}';
+        return super.toString() +
+                ", include discount (" + this.selfAproachDiscount + "$)";
     }
 
     @Override
@@ -43,6 +42,6 @@ public class DomesticTrip extends Trip{
 
     @Override
     public BigDecimal getPrice() {
-        return super.getPrice().divide(selfAproachDiscount);
+        return super.getPrice().subtract(selfAproachDiscount);
     }
 }

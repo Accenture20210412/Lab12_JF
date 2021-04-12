@@ -41,8 +41,7 @@ public class AbroadTrip extends Trip{
 
     @Override
     public String toString() {
-        return "AbroadTrip{" +
-                "insurance=" + insurance +
-                '}';
+        return super.toString() +
+                ", include insurence (" + this.insurance +"$)";
     }
 }
