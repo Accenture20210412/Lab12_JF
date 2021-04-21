@@ -1,17 +1,19 @@
-package model;
+package model.trip;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Objects;
 
+@Builder
 @Data
 @AllArgsConstructor
 
 public class Trip {
 
+    private String uniqueName;
     private LocalDate startOfTrip;
     private LocalDate endOfTrip;
     private String destiny;
