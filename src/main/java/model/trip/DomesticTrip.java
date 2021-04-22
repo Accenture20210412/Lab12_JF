@@ -7,8 +7,7 @@ import lombok.Getter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Builder
-@EqualsAndHashCode
+
 @Getter
 
 public class DomesticTrip extends Trip{
